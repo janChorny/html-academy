@@ -1,2 +1,3 @@
 # html-academy
-final task
+Float was used according to technical task
+https://janChorny.github.io/html-academy
