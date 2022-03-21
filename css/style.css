@@ -1,28 +1,70 @@
+/*Null style*/
+html{
+	height: 100%;
+}
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
 body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
-  font-family: "Arial", sans-serif;
-  color: #404040;
-  background-color: white;
-  min-width: 1040px;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+	font-family: "Arial", sans-serif;
+	color: #404040;
+	background-color: white;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+.wrapper {
+	max-width: 1440px;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 .container {
-  width: 800px;
-  margin: 0 auto;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .container--wide {
-  width: 1015px;
+	max-width: 1015px;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+/*General styles*/
+.main {
+	flex: 1 1 auto;
 }
 
 .btn {
@@ -95,86 +137,98 @@ body {
   color: #000000;
 }
 
-/*Шапка*/
+/*Header*/
 
-header {
-  height: 490px;
-  padding-top: 60px;
-  background-image: url('../img/wheat-back.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+.header {
+	padding: 60px 0px;
+	background-image: url('../img/wheat-back.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
 }
-
+.header__container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 .header__top {
-  margin: 0px 0px 120px 0px;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
-
 .header__logo {
-  float: left;
-  width: 140px;
-  height: 76px;
+	width: 140px;
+	height: 76px;
 }
-
-
-.main-nav {
-  float: right;
-  width: 600px;
-  margin: 10px 0 0 0;
-  padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.header__list {
+	display: flex;
+	align-items: center;
+	padding: 10px 0px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-.main-nav li {
-  position: relative;
-  display: inline-block;
-  margin-right: 50px;
-  vertical-align: middle;
+@media (max-width: 768px){
+	.header__list {
+		position: absolute;
+		flex-direction: column;
+		align-items:flex-start;
+		width: 620px;
+		height: 1024px;
+		background-color: #000;
+		z-index: 2;
+		margin: 0px;
+		padding: 135px 0px 0px 0px;
+		top: 0;
+		right: -620px;
+		transition: 1.0s;
+	}
+	.header__list.open{
+		right: 0;
+		box-shadow: 0 0 0 10000px rgba(0,0,0,0.5);
+	}
 }
-
-.main-nav li:last-child {
-  margin-right: 0;
+@media (max-width: 620px){
+	.header__list {
+		width: 100%;
+	}
 }
-
-.main-nav a {
-  display: inline-block;
-  padding-top: 14px;
-  padding-bottom: 13px;
-  font-weight: bold;
-  vertical-align: middle;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
+.header__item:not(:last-child) {
+	margin-right: 50px;
 }
-
-.main-nav a:hover {
-  color: #ffcb78;
+@media (max-width: 768px){
+	.header__item {
+		margin: 0px 0px 16px 127px;
+		font-size: 35px;
+		line-height: 72.55px;
+	}
 }
-
-.main-nav li:hover::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 1);
+@media (max-width: 320px){
+	.header__item {
+		margin: 0 auto;
+	}
 }
-
-.main-nav a:active {
-  color: rgba(255, 203, 120, 0.3);
+.header__item a {
+	font-weight: bold;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
 }
-
+.header__item a:hover {
+	color: #ffcb78;
+}
+.header__item a:active {
+	color: rgba(255, 203, 120, 0.3);
+}
 .header__promo {
-  font-weight: bold;
-  font-size: 70px;
-  line-height: 70px;
-  text-align: center;
-  color: #ffffff;
+	font-weight: bold;
+	font-size: 70px;
+	line-height: 70px;
+	text-align: center;
+	color: #ffffff;
 }
 
-/*Новинки*/
+/*Novelties*/
 
 .products {
   padding: 80px 0 110px 0;
@@ -262,7 +316,8 @@ header {
   color: #000000;
 }
 
-/*Преимущества*/ 
+/*Advantages*/ 
+
 .advantages {
   padding: 80px 0px 90px 0px;
   background-color: #ffcb78;
@@ -325,7 +380,7 @@ header {
   margin: 0;
 }
 
-/*Немного истории*/
+/*History*/
 
 .history {
   padding: 80px 0px;
@@ -392,7 +447,7 @@ header {
   color: #cab7a2;
 }
 
-/*Пресса о нас*/
+/*Press*/
 
 .press {
   padding: 80px 0 90px;
@@ -431,9 +486,7 @@ header {
   font-style: normal;
 }
 
-
-/*Ассортимент*/
-
+/*Range*/
 
 .price {
   padding-top: 90px;
@@ -500,7 +553,7 @@ td.price__list-item-cost {
   border-radius: 2px;
 }
 
-/* --- Заказать --- */
+/* Order */
 
 .order {
   padding: 80px 0px 110px 0px;
@@ -589,7 +642,7 @@ td.price__list-item-cost {
 }
 
 
-/*Подвал*/
+/*footer*/
 
 .footer {
   padding: 60px 0px 70px 0px;
@@ -712,4 +765,40 @@ td.price__list-item-cost {
 
 .copyright-text {
   margin: 25px 0px 0px 30px;
+}
+
+/*=============== Burger menu =============== */
+.hamburger {
+	display: none;
+}
+@media (max-width: 768px) {
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	user-select: none;
+	z-index: 3;
+	margin: 20px 64px 20px 0px;
+	}
+}
+.line {
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	margin: 5px 0;
+	z-index: 15;
+	transition: all 0.3s ease-in-out;
+}
+.hamburger.open .line1 {
+	transform: rotate(-45deg) translate(-10px, 12px);
+}
+.hamburger.open .line2 {
+	opacity: 0;
+}
+.hamburger.open .line3 {
+	transform: rotate(45deg) translate(-6px, -8px);
 }
