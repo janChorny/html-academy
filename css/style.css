@@ -129,12 +129,17 @@ body {
 }
 
 .section-title {
-  font-size: 40px;
-  line-height: 60px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0px 0px 75px 0px;
-  color: #000000;
+	font-size: 40px;
+	line-height: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0px 0px 75px 0px;
+	color: #000000;
+}
+@media (max-width: 900px){
+	.section-title {
+		margin: 0px 0px 75px 20px;
+	}
 }
 
 /*Header*/
@@ -150,6 +155,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	
 }
 .header__top {
 	position: relative;
@@ -160,9 +166,11 @@ body {
 .header__logo {
 	width: 140px;
 	height: 76px;
+	margin: 0px 0px 0px 20px;
 }
 .header__list {
 	display: flex;
+	margin: 0px 20px 0px 5px;
 	align-items: center;
 	padding: 10px 0px;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -173,8 +181,8 @@ body {
 		position: absolute;
 		flex-direction: column;
 		align-items:flex-start;
-		width: 620px;
-		height: 1024px;
+		width: 600px;
+		height: 600px;
 		background-color: #000;
 		z-index: 2;
 		margin: 0px;
@@ -203,9 +211,11 @@ body {
 		line-height: 72.55px;
 	}
 }
-@media (max-width: 320px){
+@media (max-width: 440px){
 	.header__item {
-		margin: 0 auto;
+		font-size: 30px;
+		line-height: 65px;
+		margin: 0px 0px 16px 40px;
 	}
 }
 .header__item a {
@@ -221,99 +231,120 @@ body {
 	color: rgba(255, 203, 120, 0.3);
 }
 .header__promo {
+	margin: 150px 0px;
 	font-weight: bold;
 	font-size: 70px;
 	line-height: 70px;
 	text-align: center;
 	color: #ffffff;
 }
+@media (max-width: 768px){
+	.header__promo {
+		margin: 50px 0px;
+		font-size: 40px;
+		line-height: 40px;
+	}
+}
+@media (max-width: 440px){
+	.header__promo {
+		margin: 30px 0px;
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
 
 /*Novelties*/
 
 .products {
-  padding: 80px 0 110px 0;
-  background-color: #ffffff;
+	padding: 80px 0 110px 0;
+	background-color: #ffffff;
 }
-
-
+.products__card-list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
 .products__card {
-  position: relative;
-  float: left;
-  width: 334px;
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-  padding: 0 30px 0px 34px;
+	position: relative;
+	flex: 0 1 50%;
+	padding: 0 30px 0px 30px;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
 }
-
 .products__card:nth-child(2n) {
-  border-left: none;
+	border-left: none;
 }
-
-
+@media (max-width: 783px) {
+	.products__card {
+		flex: 0 1 70%;
+	}
+		.products__card:first-child {
+		margin: 0px 0px 50px 0px;
+	}
+	.products__card:nth-child(2n) {
+	border-left: 1px solid #e5e5e5;
+}
+}
 .products__card-title {
-  position: relative;
-  font-size: 40px;
-  line-height: 60px;
-  text-transform: uppercase;
-  margin: 0;
-  color: #000000;
+	/* position: relative; */
+	font-size: 40px;
+	line-height: 60px;
+	text-transform: uppercase;
+	margin: 0;
+	color: #000000;
 }
-
 .products__card-image {
-  margin: 30px 0px 0px 10px;
+	margin: 30px 0px 0px 10px;
 }
-
 .products__card-info {
-  position: absolute;
-  top: 85px;
-  right: 0;
-  width: 150px;
-  padding: 0px 25px 0px 0px;
+	position: absolute;
+	top: 85px;
+	right: 20px;
+	width: 150px;
+	padding: 0px 0px 0px 0px;
 }
-
 .products__properties {
-  border-collapse: collapse;
-  width: 150px;
-  margin: 0px 0px 10px 0px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
+	border-collapse: collapse;
+	width: 150px;
+	margin: 0px 0px 10px 0px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
 }
-
 .products__properties td {
-  border: 1px solid #e5e5e5;
-  padding: 5px 10px;
+	border: 1px solid #e5e5e5;
+	padding: 5px 10px;
 }
-
 .products__consist {
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
+	margin: 0px 0px 0px 0px;
+	font-size: 14px;
+	line-height: 24px;
 }
-
 .products__card-description {
-  margin: 0px 0px 60px 0px;
-  width: 330px;
+	margin: 0px 0px 60px 0px;
+	width: 330px;
 }
-
 .products__card-ordering {
-  font-size: 0;
+	font-size: 0;
 }
-
 .products__card-ordering a {
-  font-size: 16px;
+	font-size: 16px;
 }
-
 .products__card-ordering .btn--transparent {
-  margin: 0px 7px 0px 0px;
+margin: 0px 7px 0px 0px;
 }
-
 .products__price {
-  display: inline-block;
-  margin: 0px 0px 0px 25px;
-  font-size: 16px;
-  vertical-align: middle;
-  color: #000000;
+	display: inline-block;
+	margin: 0px 0px 0px 25px;
+	font-size: 16px;
+	vertical-align: middle;
+	color: #000000;
+}
+@media (max-width: 562px){
+	.products__price {
+		margin: 0px 0px 0px 10px;
+	}
 }
 
 /*Advantages*/ 
@@ -782,7 +813,7 @@ td.price__list-item-cost {
 	cursor: pointer;
 	user-select: none;
 	z-index: 3;
-	margin: 20px 64px 20px 0px;
+	margin: 20px 50px 20px 20px;
 	}
 }
 .line {
