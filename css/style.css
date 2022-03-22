@@ -1,6 +1,7 @@
 /*Null style*/
 html{
 	height: 100%;
+	scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -40,7 +41,6 @@ body {
 	color: #404040;
 	background-color: white;
 	box-sizing: border-box;
-	scroll-behavior: smooth;
 	height: 100%;
 }
 .wrapper {
@@ -54,7 +54,6 @@ body {
 .container {
 	max-width: 800px;
 	margin: 0 auto;
-	outline: 1px solid green;
 }
 .container--wide {
 	max-width: 1015px;
@@ -761,30 +760,80 @@ td.price__list-item-cost {
 /*footer*/
 
 .footer {
-  padding: 60px 0px 70px 0px;
-  background-color: #000000;
+	padding: 60px 0px 70px 0px;
+	background-color: #000000;
 }
-
+.footer__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@media (max-width: 360px) {
+	.footer__top {
+		flex-direction: column;
+	}
+}
 .footer__logo {
-  float: left;
-  width: 140px;
-  height: 76px;
-  margin: 0px 0px 0px 37px;
+	width: 140px;
+	height: 76px;
+	margin: 0px 0px 0px 37px;
 }
-
-.main-nav--footer {
-  margin: 7px 107px 0px 0px;
+@media (max-width: 360px) {
+	.footer__logo {
+		margin: 0px 0px 30px 0px;
+	}
 }
-
+.footer__list {
+	margin: 7px 120px 0px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 0px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 360px) {
+	.footer__list {
+		margin: 0 auto;
+		width: 50%;
+	}
+}
+.footer__item:not(:last-child) {
+	margin-right: 50px;
+}
+.footer__item a {
+	font-weight: bold;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.footer__item a:hover {
+	color: #ffcb78;
+}
+.footer__item a:active {
+	color: rgba(255, 203, 120, 0.3);
+}
 .footer__bottom {
-  margin: 47px 0px 0px 0px;
+	margin: 47px 0px 0px 0px;
+	display: flex;
+	flex-wrap: wrap;
 }
-
+@media (max-width: 930px){
+	.footer__bottom {
+	margin: 47px 0px 0px 0px;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+}
+}
 .footer__media {
-  float: left;
-  width: 216px;
+	float: left;
+	width: 216px;
 }
-
+@media (max-width: 1015px) {
+	.footer__media {
+	float: none;
+	}
+}
 .footer__media a {
   position: relative;
   float: left;
@@ -827,7 +876,16 @@ td.price__list-item-cost {
   color: #989898;
   margin: 12px 0px 0px 91px;
 }
-
+@media (max-width: 1015px) {
+	.footer__annotation {
+	float: none;
+	}
+}
+@media (max-width: 930px) {
+	.footer__annotation {
+	margin: 12px 0px 0px 0px;
+	}
+}
 .footer__annotation p {
   margin: 0;
 }
@@ -838,49 +896,54 @@ td.price__list-item-cost {
   font-size: 0;
   margin: 0px 0px 0px 200px;
 }
-
+@media (max-width: 1015px) {
+	.footer__copyright {
+	float: none;
+	margin: 0px 0px 0px 100px;
+	}
+}
+@media (max-width: 930px) {
+	.footer__copyright {
+	float: none;
+	margin: 0px 0px 0px 0px;
+	}
+}
 .footer__copyright a {
-  color: #989898;
-  text-decoration: none;
+	color: #989898;
+	text-decoration: none;
 }
-
 .logo-htmlacademy {
-  position: relative;
-  display: inline-block;
-  width: 70px;
-  height: 66px;
-  vertical-align: top;
-  background-color: #1b1b1b;
-  border: 1px solid rgba(255, 203, 120, 0.1);
-}
-
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 66px;
+	vertical-align: top;
+	background-color: #1b1b1b;
+	border: 1px solid rgba(255, 203, 120, 0.1);
+}	
 .logo-htmlacademy:hover {
-  border-color: rgba(255, 203, 120, 0.3);
+	border-color: rgba(255, 203, 120, 0.3);
 }
-
 .logo-htmlacademy:active {
-  opacity: 0.5;
+	opacity: 0.5;
 }
-
 .logo-htmlacademy img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
 }
-
 .footer__copyright span {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  vertical-align: middle;
-  color: #989898;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 20px;
+	vertical-align: middle;
+	color: #989898;
 }
-
 .copyright-text {
-  margin: 25px 0px 0px 30px;
+	margin: 25px 0px 0px 30px;
 }
 
 /*=============== Burger menu =============== */
@@ -917,4 +980,49 @@ td.price__list-item-cost {
 }
 .hamburger.open .line3 {
 	transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/*Arrow-up------------------------------------------*/
+.arrow__up{
+   position: fixed;
+   right: 50px;
+   bottom: 50px;
+   width: 100px;
+	filter: invert(25%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+	cursor: pointer;
+	transition: 0.5s;
+}
+.arrow__up:hover{
+	filter: invert(75%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%); 
+	transform: translatey(-0.65em) scale(1.2);
+}
+#toTop {
+	position: fixed;
+	display: inline-block;
+	bottom: 30px;
+	right: -40px;
+	width: 40px;
+	height: 40px;
+	z-index: 1000;
+	cursor: pointer;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease-in-out;
+}
+#toTop img {
+	position: relative;
+	top: 12px;
+	right: -1px;
+	transition: all .3s ease-in-out;
+}
+#toTop:hover img {
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+#toTop.show {
+	opacity: 1;
+	visibility: visible;
+	right: calc(13%);
+	bottom: calc(15%);
 }

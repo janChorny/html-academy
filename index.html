@@ -12,6 +12,10 @@
 
 		<div class="wrapper">
 
+			<a onclick="location='#header'" id="toTop">
+				<img src="./img/arrow.svg" alt="Arrow" class="arrow__up">
+			</a>
+
 			<header class="header">
 				<div class="header__container container">
 					<div class="header__top">
@@ -19,10 +23,10 @@
 							<img src="./img/logo.png" alt="logo" width="140" height="76">
 						</div>
 						<ul class="header__list">
-							<li class="header__item"><a href="#">История</a></li>
-							<li class="header__item"><a href="#">Производство</a></li>
-							<li class="header__item"><a href="#">Ассортимент</a></li>
-							<li class="header__item"><a href="#">Где купить</a></li>
+							<li class="header__item"><a href="#history">История</a></li>
+							<li class="header__item"><a href="#products">Производство</a></li>
+							<li class="header__item"><a href="#price">Ассортимент</a></li>
+							<li class="header__item"><a href="#order">Где купить</a></li>
 						</ul>
 						<div class="hamburger">
 							<div class="line line1"></div>
@@ -39,7 +43,7 @@
 
 		<main class="main">
 		
-			<section class="products">
+			<section class="products" id="products">
 				<div class="container">
 					<h2 class="section-title">Новинки</h2>
 					<div class="products__card-list">
@@ -94,7 +98,7 @@
 			</section>
 
 			<section class="advantages">
-				<div class="container container--wide ">
+				<div class="container container--wide">
 					<ul class="advantages__list ">
 						<li class="advantages__list-by-own-hands">
 							<h2 class="advantages__list-title">Варим сами</h2>
@@ -115,7 +119,7 @@
 				</div>
 			</section>
 
-			<section class="history">
+			<section class="history" id="history">
 				<div class="container">
 					<h2 class="section-title section-title--history">Немного истории</h2>
 					<div class="history__list">
@@ -159,7 +163,7 @@
 				</div>
 			</section>
 
-			<section class="price">
+			<section class="price" id="price">
 				<div class="container">
 					<h2 class="section-title">Ассортимент</h2>
 					<table class="price__list">
@@ -202,7 +206,7 @@
 				</div>
 			</section>
 
-			<section class="order">
+			<section class="order" id="order">
 				<div class="container">
 					<h2 class="section-title">Заказать</h2>
 						<p class="order__tip">Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10 баррелей — скидка 10%.
@@ -259,35 +263,35 @@
 			</section>
 	</main> 
 
-<footer class="footer">
+	<footer class="footer">
 		<div class="container container--wide">
-		<div class="footer__top ">
-			<div class="footer__logo">
-				<img src="./img/logo.png" alt="logo" width="140" height="76">
+			<div class="footer__top ">
+				<div class="footer__logo">
+					<img src="./img/logo.png" alt="logo" width="140" height="76">
+				</div>
+				<ul class="footer__list">
+					<li class="footer__item"><a href="#history">История</a></li>
+					<li class="footer__item"><a href="#products">Производство</a></li>
+					<li class="footer__item"><a href="#price">Ассортимент</a></li>
+					<li class="footer__item"><a href="#order">Где купить</a></li>
+				</ul>
 			</div>
-			<ul class="main-nav main-nav--footer">
-				<li><a href="#">История</a></li>
-				<li><a href="#">Производство</a></li>
-				<li><a href="#">Ассортимент</a></li>
-				<li><a href="#">Где купить</a></li>
-			</ul>
+			<div class="footer__bottom ">
+				<div class="footer__media ">
+					<a class="footer__media--in" href="#">Инстаграм</a>
+					<a class="footer__media--fb" href="#">Фейсбук</a>
+					<a class="footer__media--vk" href="#">Вконтакте</a>
+				</div>
+				<div class="footer__annotation">
+					<p>При перепечатке материалов ссылка на сайт обязательна!
+					</p>
+				</div>
+				<div class="footer__copyright ">
+					<a class="logo-htmlacademy" href="https://htmlacademy.ru"><img src="./img/htmlacademy.png" alt="HTML Academy" width="27" height="34"></a><span class="copyright-text"><b>Разработчик:</b> <a href="https://htmlacademy.ru">HTML Academy</a></span>
+				</div>
+			</div>
 		</div>
-		<div class="footer__bottom ">
-		<div class="footer__media ">
-			<a class="footer__media--in" href="#">Инстаграм</a>
-			<a class="footer__media--fb" href="#">Фейсбук</a>
-			<a class="footer__media--vk" href="#">Вконтакте</a>
-		</div>
-		<div class="footer__annotation">
-		<p>При перепечатке материалов ссылка на сайт обязательна!
-		</p>
-	</div>
-		<div class="footer__copyright ">
-			<a class="logo-htmlacademy" href="https://htmlacademy.ru"><img src="./img/htmlacademy.png" alt="HTML Academy" width="27" height="34"></a><span class="copyright-text"><b>Разработчик:</b> <a href="https://htmlacademy.ru">HTML Academy</a></span>
-		</div>
-	</div>
-	</div>
-	</footer>
+	</footer> 
 
 		</div>
 		<script src="./script.js"></script>
