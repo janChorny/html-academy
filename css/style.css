@@ -599,68 +599,63 @@ margin: 0px 7px 0px 0px;
 /*Range*/
 
 .price {
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background-color: #ffffff;
+	padding-top: 90px;
+	padding-bottom: 90px;
+	background-color: #ffffff;
 }
-
 .price__list {
-  width: 100%;
-  border-collapse: collapse;
+	width: 100%;
+	border-collapse: collapse;
 }
-
+@media (max-width: 900px){
+	.price__list {
+	margin: 0px 20px 0px 20px;
+	width: 90%;
+	}
+}
 .price__list th {
-  padding-bottom: 30px;
-  font-weight: normal;
-  font-size: 11px;
-  text-align: left;
-  color: #999999;
-  text-transform: uppercase;
+	padding-bottom: 30px;
+	font-weight: normal;
+	font-size: 11px;
+	text-align: left;
+	color: #999999;
+	text-transform: uppercase;
 }
-
 .price__list td {
-  padding: 17px 0;
+	padding: 17px 0;
 }
-
 .price__list th,
 .price__list td {
-  border-bottom: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
 }
-
 .price__list-item-name {
-  width: 400px;
-  font-weight: bold;
-  color: #000000;
-  text-transform: uppercase;
+	width: 400px;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
 }
-
 .price__list-item-alcohol {
-  width: 90px;
+	width: 90px;
 }
-
 .price__list-item-calories {
-  width: 60px;
+	width: 60px;
 }
-
 .price__list-item-volume {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
-
 th.price__list-item-cost,
 td.price__list-item-cost {
-  text-align: right;
+	text-align: right;
 }
-
 .tip {
-  margin-left: 20px;
-  padding: 2px 5px;
-  font-size: 8px;
-  line-height: 30px;
-  color: #ffffff;
-  text-transform: uppercase;
-
-  background-color: #000000;
-  border-radius: 2px;
+	margin-left: 20px;
+	padding: 2px 5px;
+	font-size: 8px;
+	line-height: 30px;
+	color: #ffffff;
+	text-transform: uppercase;	
+	background-color: #000000;
+	border-radius: 2px;
 }
 
 /* Order */
