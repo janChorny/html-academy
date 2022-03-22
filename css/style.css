@@ -661,91 +661,102 @@ td.price__list-item-cost {
 /* Order */
 
 .order {
-  padding: 80px 0px 110px 0px;
-  background-color: #ffcb78;
+	padding: 80px 0px 110px 0px;
+	background-color: #ffcb78;
 }
-
 .order__tip {
-  width: 660px;
-  margin: 0px 0px 70px 0px;
+	width: 660px;
+	margin: 0px 0px 70px 0px;
 }
-
+@media (max-width: 900px){
+	.order__tip {
+	width: 80%;
+	margin: 0px 0px 70px 20px;
+}
+}
 .order__form {
-  width: 630px;
+	width: 630px;
 }
-
+@media (max-width: 900px){
+	.order__form {
+	width: 80%;
+	padding: 0px 20px;
+	}
+}
 .order__form-group {
-  margin: 0px 0px 25px 0px;
+	margin: 0px 0px 25px 0px;
 }
-
 .order__form-group label {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  vertical-align: top;
-  color: #000000;
-  text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	vertical-align: top;
+	color: #000000;
+	text-transform: uppercase;
 }
-
 .order__form-group input[type="text"],
 .order__form-group textarea {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15px 10px 15px 20px;
-  font: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #b69054;
-  text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: none;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px 10px 15px 20px;
+	font: inherit;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	color: #b69054;
+	text-transform: uppercase;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: none;
 }
-
 .order__form-group textarea {
-  height: 120px;
-  resize: none;
+	height: 120px;
+	resize: none;
 }
-
 .order__form-group input[type="text"]:hover,
 .order__form-group textarea:hover {
-  background-color: rgba(0, 0, 0, 0.15);
+	background-color: rgba(0, 0, 0, 0.15);
 }
-
 .order__form-group input[type="text"]:focus,
 .order__form-group textarea:focus {
-  color: #000000;
-  background-color: #ffffff;
+	color: #000000;
+	background-color: #ffffff;
 }
-
 .order__form-group-left {
-  float: left;
-  width: 290px;
+	float: left;
+	width: 290px;
 }
-
+@media (max-width: 783px) {
+	.order__form-group-left {
+	float: none;
+	width: 100%;
+	}
+}
 .order__form-group-right {
-  float: right;
-  width: 290px;
+	float: right;
+	width: 290px;
 }
-
+@media (max-width: 783px) {
+	.order__form-group-right {
+	float: none;
+	width: 100%;
+	margin-top: 20px;
+	}
+}
 .checkbox-area {
-  margin: 0px 0px 40px 0px;
+	margin: 0px 0px 40px 0px;
 }
-
 .checkbox-area input {
-  margin: 0px 10px 0px 0px;
-}
-
+	margin: 0px 10px 0px 0px;
+}	
 .checkbox-area label {
-  margin: 0px 15px 0px 0px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  vertical-align: middle;
-  color: #000000;
-  text-transform: uppercase;
+	margin: 0px 15px 0px 0px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	vertical-align: middle;
+	color: #000000;
+	text-transform: uppercase;
 }
-
 
 /*footer*/
 
