@@ -56,6 +56,7 @@ body {
 .container {
 	max-width: 800px;
 	margin: 0 auto;
+	outline: 1px solid green;
 }
 
 .container--wide {
@@ -350,65 +351,71 @@ margin: 0px 7px 0px 0px;
 /*Advantages*/ 
 
 .advantages {
-  padding: 80px 0px 90px 0px;
-  background-color: #ffcb78;
+	padding: 80px 0px 90px 0px;
+	background-color: #ffcb78;
 }
-
 .advantages__list {
-  list-style: none;
-  margin:0;
-  padding:0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
-
 .advantages__list li {
-  position: relative;
-  float: left;
-  width: 210px;
-  padding: 0px 95px;
-  border-right: 1px solid #e5b66c;
+	position: relative;
+	flex: 0 1 33.333%;
+	padding: 0px 60px;
 }
-
-.advantages__list li:first-child {
-  padding-left: 0;
+@media (max-width: 900px){
+	.advantages__list li {
+		padding: 0px 30px;
+	}
 }
-
-.advantages__list li:last-child {
-  padding-right: 0;
-  border-right-color: transparent;
+@media (max-width: 808px){
+	.advantages__list li {
+		flex: 0 0 50%;
+	}
+	.advantages__list li:last-child {
+		flex: 0 0 100%;
+		margin: 20px 0px 0px 0px;
+	} 
 }
-
+@media (max-width: 528px){
+	.advantages__list li {
+		flex: 1 1 100%;
+	}
+	.advantages__list li:not(:first-child) {
+		margin: 20px 0px 0px 0px;
+	} 
+}
+.advantages__list li:not(:last-child) {
+	border-right: 1px solid #e5b66c;
+}
 .advantages__list li::before {
-  content: "";
-  position: absolute;
+	content: "";
+	position: absolute;
 }
-
 .advantages__list-by-own-hands::before {
-  width: 50px;
-  height: 68px;
-  background-image: url("../img/icon-brew.png");
+	width: 50px;
+	height: 68px;
+	background-image: url("../img/icon-brew.png");
 }
-
 .advantages__list-native::before {
-  width: 46px;
-  height: 65px;
-  background-image: url("../img/icon-matreshka.png");
+	width: 46px;
+	height: 65px;
+	background-image: url("../img/icon-matreshka.png");
 }
-
 .advantages__list-quality::before {
-  width: 63px;
-  height: 58px;
-  background-image: url("../img/icon-thumbsup.png");
+	width: 63px;
+	height: 58px;
+	background-image: url("../img/icon-thumbsup.png");
 }
-
 .advantages__list-title {
-  margin: 100px 0px 20px 0px;
-  font-size: 20px;
-  color: #000000;
-  text-transform: uppercase;
+	margin: 100px 0px 20px 0px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
 }
-
 .advantages__list-text {
-  margin: 0;
 }
 
 /*History*/
