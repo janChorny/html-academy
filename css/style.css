@@ -131,7 +131,7 @@ body {
 
 .header {
 	padding: 60px 0px;
-	background-image: url('../img/wheat-back.jpg');
+	background-image: url('../img/wheat-back.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom;
@@ -762,6 +762,7 @@ td.price__list-item-cost {
 .footer {
 	padding: 60px 0px 70px 0px;
 	background-color: #000000;
+	position: relative;
 }
 .footer__top {
 	display: flex;
@@ -945,7 +946,11 @@ td.price__list-item-cost {
 .copyright-text {
 	margin: 25px 0px 0px 30px;
 }
-
+.w3c-css{
+	position: absolute;
+	bottom: 0;
+	left:0;
+}
 /*=============== Burger menu =============== */
 .hamburger {
 	display: none;
